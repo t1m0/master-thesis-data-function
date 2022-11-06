@@ -12,6 +12,13 @@
       "type": "http",
       "direction": "out",
       "name": "res"
+    },
+    {
+      "name": "outBlob",
+      "type": "blob",
+      "path": "master-thesis-data/{game}/{user}/{uuid}.json",
+      "connection": "StorageConnection",
+      "direction": "out"
     }
   ]
 }

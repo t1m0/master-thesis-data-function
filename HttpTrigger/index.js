@@ -6,7 +6,7 @@ module.exports = async function (context, req) {
     context.game = req.query.game
     context.user = req.query.user
 
-    if ('POST' != req.method) {
+    if ('POST' != req.method || 'PUT' != req.method) {
         context.res = {status: 405, body: `Method '${req.method}' not allowed!` };
     } else if(context.uuid && context.game && context.user && body) {
         context.bindings.outBlob = req.body;

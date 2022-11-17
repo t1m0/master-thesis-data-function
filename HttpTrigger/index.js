@@ -10,7 +10,7 @@ module.exports = async function (context, req) {
         context.res = {status: 405, body: `Method '${req.method}' not allowed!` };
     } else if(context.uuid && context.game && context.user && body) {
         context.bindings.outBlob = req.body;
-        context.res = { status: 201 };
+        context.res = { status: 201 }; 
     } else {
         context.res = {status: 400, body: 'Bad Request!' };
     }
